@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app {
+    @apply bg-blue-900 grid grid-cols-12 gap-10 p-10;
+    grid-template-rows: 3rem 2fr repeat(2, minmax(0, 1fr));
+  }
+
+  .flex-basis-0 {
+    flex-basis: 0;
+  }
+
+  .location-card {
+    min-height: 6rem;
+    max-height: 10rem;
+  }
+}
