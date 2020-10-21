@@ -10,6 +10,7 @@ type CardProps = {
   color?: 'main' | 'secondary' | 'active' | 'inherit'
   className?: string
   title?: string
+  onClick?: () => void
 }
 
 function Card (props: React.PropsWithChildren<CardProps>) {
@@ -24,7 +25,10 @@ function Card (props: React.PropsWithChildren<CardProps>) {
     }
   }
   return (
-    <div className={classNames('rounded-lg', color, props.className)}>
+    <div
+      className={classNames('rounded-lg', color, props.className, { 'hover:cursor-pointer': props.onClick !== undefined })}
+      onClick={props.onClick}
+    >
       {props.title && <h2 className={classNames('text-xl p-3 rounded-tl-lg rounded-tr-lg bg-blue-800 text-white')}>{props.title}</h2>}
       {props.children}
     </div>
@@ -48,7 +52,11 @@ type LocationCardProps = Pick<CardProps, 'className'> & {
 }
 function LocationCard (props: React.PropsWithChildren<LocationCardProps>) {
   return (
-    <Card className='location-card my-2' color={props.active ? 'active' : undefined}>
+    <Card
+      className='location-card my-2'
+      color={props.active ? 'active' : undefined}
+      onClick={console.log.bind(null, 'card clicked')}
+    >
       <p className='text-white text-center text-xl'>{props.name}</p>
       {props.children}
     </Card>
