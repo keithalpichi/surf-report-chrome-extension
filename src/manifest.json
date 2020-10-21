@@ -7,5 +7,6 @@
     "persistent": false
   },
   "manifest_version": 2,
-  "browser_action": {}
+  "browser_action": {},
+  "permissions": ["geolocation"]
 }

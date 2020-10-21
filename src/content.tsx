@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom'
 import './styles.css'
 import * as dayjs from 'dayjs'
 import { classNames } from './utils'
+import { Location, AppError } from './models'
 
 const mountNode = document.getElementById('app')
 
@@ -64,6 +65,26 @@ function LocationCard (props: React.PropsWithChildren<LocationCardProps>) {
 }
 
 function App () {
+  const [error, setError] = React.useState<AppError | null>(null)
+  const [location, setLocation] = React.useState<Location | null>(null)
+  navigator.geolocation.getCurrentPosition(
+    (pos: Position) => setLocation(new Location({ coordinates: pos.coords })),
+    (posError: PositionError) => {
+      switch (posError.code) {
+        case 1:
+          setError(new AppError({ id: 'PERMISSION_DENIED', message: 'User denied permission to access geolocation' }))
+          break
+        case 2:
+          setError(new AppError({ id: 'POSITION_UNAVAILABLE', message: 'Browser failed to retrieve the user\'s geolocation' }))
+          break
+        case 3:
+          setError(new AppError({ id: 'TIMEOUT', message: 'Request for user\'s geolocation timed out' }))
+          break
+        default:
+          break
+      }
+    }
+  )
   return (
     <div className='app min-h-screen min-w-screen'>
       <h1 className='col-span-8 font-sans font-bold text-4xl text-white'>Surf Report</h1>
