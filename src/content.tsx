@@ -87,8 +87,14 @@ function App () {
   )
   return (
     <div className='app min-h-screen min-w-screen'>
-      <h1 className='col-span-8 font-sans font-bold text-4xl text-white'>Surf Report</h1>
-      <h2 className='col-span-4 font-sans text-2xl text-white text-right'>{dayjs().format('dddd, MMMM D, YYYY h:mm A')}</h2>
+      <h1 className='sm:col-span-12 md:col-span-2 font-sans font-bold text-4xl text-white'>Surf Report</h1>
+      <p className='sm:col-span-12 md:col-span-8 text-center font-sans text-2xl text-white'>{dayjs().format('dddd, MMMM D, YYYY h:mm A')}</p>
+      <button
+        className='sm:col-span-12 md:col-span-2 transition-colors duration-100 ease-in-out text-gray-600 py-2 pr-4 pl-4 block w-full appearance-none leading-normal border border-transparent rounded-lg focus:outline-none text-left select-none truncate focus:bg-white focus:border-gray-300 bg-gray-200'
+        onClick={console.log}
+      >
+        Find a Spot
+      </button>
       <LocationCards className='col-span-2 row-start-2 row-end-5'>
         <LocationCard name='San Diego' active></LocationCard>
         <LocationCard name='San Diego'></LocationCard>
