@@ -1,0 +1,551 @@
+[
+  {
+    "took": 4,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 2,
+      "max_score": 41.852356,
+      "hits": [
+        {
+          "_index": "spots",
+          "_type": "spot",
+          "_id": "5842041f4e65fad6a77088cc",
+          "_score": 41.852356,
+          "_source": {
+            "breadCrumbs": [
+              "United States",
+              "California",
+              "San Diego"
+            ],
+            "name": "La Jolla Shores",
+            "location": {
+              "lon": -117.257,
+              "lat": 32.863
+            },
+            "cams": [
+              "58349b9b3421b20545c4b54d"
+            ],
+            "href": "https://www.surfline.com/surf-report/la-jolla-shores/5842041f4e65fad6a77088cc"
+          }
+        },
+        {
+          "_index": "spots",
+          "_type": "spot",
+          "_id": "584204204e65fad6a7709402",
+          "_score": 1.7068052e-23,
+          "_source": {
+            "breadCrumbs": [
+              "Mexico",
+              "Oaxaca",
+              "San Pedro Huamelula"
+            ],
+            "name": "La Jolla",
+            "location": {
+              "lon": -95.776,
+              "lat": 15.876
+            },
+            "cams": [],
+            "href": "https://www.surfline.com/surf-report/la-jolla/584204204e65fad6a7709402"
+          }
+        }
+      ]
+    },
+    "suggest": {
+      "spot-suggest": [
+        {
+          "text": "la jolla",
+          "offset": 0,
+          "length": 8,
+          "options": [
+            {
+              "text": "La Jolla Shores",
+              "_index": "spots",
+              "_type": "spot",
+              "_id": "5842041f4e65fad6a77088cc",
+              "_score": 9,
+              "_source": {
+                "breadCrumbs": [
+                  "United States",
+                  "California",
+                  "San Diego"
+                ],
+                "name": "La Jolla Shores",
+                "location": {
+                  "lon": -117.257,
+                  "lat": 32.863
+                },
+                "cams": [
+                  "58349b9b3421b20545c4b54d"
+                ],
+                "href": "https://www.surfline.com/surf-report/la-jolla-shores/5842041f4e65fad6a77088cc"
+              },
+              "contexts": {
+                "type": [
+                  "spot"
+                ],
+                "location": [
+                  "9mu"
+                ]
+              }
+            },
+            {
+              "text": "La Jolla",
+              "_index": "spots",
+              "_type": "spot",
+              "_id": "584204204e65fad6a7709402",
+              "_score": 8,
+              "_source": {
+                "breadCrumbs": [
+                  "Mexico",
+                  "Oaxaca",
+                  "San Pedro Huamelula"
+                ],
+                "name": "La Jolla",
+                "location": {
+                  "lon": -95.776,
+                  "lat": 15.876
+                },
+                "cams": [],
+                "href": "https://www.surfline.com/surf-report/la-jolla/584204204e65fad6a7709402"
+              },
+              "contexts": {
+                "type": [
+                  "spot"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "status": 200
+  },
+  {
+    "took": 2,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 0,
+      "max_score": null,
+      "hits": []
+    },
+    "suggest": {
+      "subregion-suggest": [
+        {
+          "text": "la jolla",
+          "offset": 0,
+          "length": 8,
+          "options": []
+        }
+      ]
+    },
+    "status": 200
+  },
+  {
+    "took": 3,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 1,
+      "max_score": 34.571198,
+      "hits": [
+        {
+          "_index": "taxonomy",
+          "_type": "geoname",
+          "_id": "58f7ed68dadb30820bb3a18e",
+          "_score": 34.571198,
+          "_source": {
+            "breadCrumbs": [
+              "United States",
+              "California",
+              "San Diego"
+            ],
+            "name": "La Jolla",
+            "location": {
+              "lon": -117.2742,
+              "lat": 32.84727
+            },
+            "href": "https://www.surfline.com/surf-reports-forecasts-cams/united-states/california/san-diego/la-jolla/5363943"
+          }
+        }
+      ]
+    },
+    "suggest": {
+      "geoname-suggest": [
+        {
+          "text": "la jolla",
+          "offset": 0,
+          "length": 8,
+          "options": [
+            {
+              "text": "La Jolla",
+              "_index": "taxonomy",
+              "_type": "geoname",
+              "_id": "58f7ed68dadb30820bb3a18e",
+              "_score": 8,
+              "_source": {
+                "breadCrumbs": [
+                  "United States",
+                  "California",
+                  "San Diego"
+                ],
+                "name": "La Jolla",
+                "location": {
+                  "lon": -117.2742,
+                  "lat": 32.84727
+                },
+                "href": "https://www.surfline.com/surf-reports-forecasts-cams/united-states/california/san-diego/la-jolla/5363943"
+              },
+              "contexts": {
+                "type": [
+                  "geoname"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "status": 200
+  },
+  {
+    "took": 3,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 2,
+      "max_score": 0,
+      "hits": [
+        {
+          "_index": "feed",
+          "_type": "editorial",
+          "_id": "29493",
+          "_score": 0,
+          "_source": {
+            "createdAt": "2018-07-11T23:28:09",
+            "suggestTags": [
+              "Spot Check",
+              "La Jolla Shores",
+              "San Diego",
+              "Spot Check"
+            ],
+            "permalink": "https://www.surfline.com/surf-news/spot-check-la-jolla-shores/29493",
+            "content": {
+              "displayTitle": "",
+              "subtitle": "Surfing guide to San Diego beachbreak with local Jake Halstead",
+              "title": "Spot Check: La Jolla Shores"
+            },
+            "tags": [
+              {
+                "name": "Spot Check",
+                "url": "https://www.surfline.com/category/travel/spot-check"
+              }
+            ]
+          }
+        },
+        {
+          "_index": "feed",
+          "_type": "editorial",
+          "_id": "52860",
+          "_score": 0,
+          "_source": {
+            "createdAt": "2019-05-29T17:02:12",
+            "suggestTags": [
+              "Breaking",
+              "Injury",
+              "La Jolla"
+            ],
+            "permalink": "https://www.surfline.com/surf-news/la-jolla-grom-charging-head-injury/52860",
+            "content": {
+              "displayTitle": "",
+              "subtitle": "Who’s the 16-year-old pig-dogging slabs with the Gath helmet on? Mick Davey. ",
+              "title": "La Jolla Grom Charging After Head Injury"
+            },
+            "tags": [
+              {
+                "name": "Breaking",
+                "url": "https://www.surfline.com/category/breaking"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "suggest": {
+      "feed-tag-suggest": [
+        {
+          "text": "la jolla",
+          "offset": 0,
+          "length": 8,
+          "options": [
+            {
+              "text": "La Jolla",
+              "_index": "feed",
+              "_type": "editorial",
+              "_id": "81468",
+              "_score": 8,
+              "_source": {
+                "createdAt": "2020-03-25T21:56:17",
+                "suggestTags": [
+                  "Video",
+                  "Editor's Picks",
+                  "California",
+                  "Jake Halstead",
+                  "La Jolla",
+                  "Not Another VLOG"
+                ],
+                "permalink": "https://www.surfline.com/surf-news/jake-halstead-keeps-real-makes-one-edit-drops-mic/81468",
+                "content": {
+                  "displayTitle": "",
+                  "subtitle": "Not Another Vlog...",
+                  "title": "Jake Halstead Keeps it Real, Makes One Edit, Drops Mic"
+                },
+                "tags": [
+                  {
+                    "name": "Video",
+                    "url": "https://www.surfline.com/category/video"
+                  },
+                  {
+                    "name": "Editor's Picks",
+                    "url": "https://www.surfline.com/surf-news/series/editors-picks"
+                  }
+                ]
+              },
+              "contexts": {
+                "type": [
+                  "editorial"
+                ]
+              }
+            },
+            {
+              "text": "La Jolla",
+              "_index": "feed",
+              "_type": "editorial",
+              "_id": "12928",
+              "_score": 8,
+              "_source": {
+                "createdAt": "2017-11-02T22:25:01",
+                "suggestTags": [
+                  "Features",
+                  "adaptive surfing",
+                  "La Jolla",
+                  "Mike Coots"
+                ],
+                "permalink": "https://www.surfline.com/surf-news/adapt-conquer-stance-isa-world-adaptive-surfing-championship/12928",
+                "content": {
+                  "subtitle": "Barrier-breaking surfing event celebrates its third birthday at La Jolla Shores, November 29th-December 3rd.",
+                  "title": "Adapt and Conquer: The Stance ISA World Adaptive Surfing Championship"
+                },
+                "tags": [
+                  {
+                    "name": "Features",
+                    "url": "https://www.surfline.com/category/features"
+                  }
+                ]
+              },
+              "contexts": {
+                "type": [
+                  "editorial"
+                ]
+              }
+            },
+            {
+              "text": "La Jolla",
+              "_index": "feed",
+              "_type": "editorial",
+              "_id": "52860",
+              "_score": 8,
+              "_source": {
+                "createdAt": "2019-05-29T17:02:12",
+                "suggestTags": [
+                  "Breaking",
+                  "Injury",
+                  "La Jolla"
+                ],
+                "permalink": "https://www.surfline.com/surf-news/la-jolla-grom-charging-head-injury/52860",
+                "content": {
+                  "displayTitle": "",
+                  "subtitle": "Who’s the 16-year-old pig-dogging slabs with the Gath helmet on? Mick Davey. ",
+                  "title": "La Jolla Grom Charging After Head Injury"
+                },
+                "tags": [
+                  {
+                    "name": "Breaking",
+                    "url": "https://www.surfline.com/category/breaking"
+                  }
+                ]
+              },
+              "contexts": {
+                "type": [
+                  "editorial"
+                ]
+              }
+            },
+            {
+              "text": "La Jolla Shores",
+              "_index": "feed",
+              "_type": "editorial",
+              "_id": "29493",
+              "_score": 8,
+              "_source": {
+                "createdAt": "2018-07-11T23:28:09",
+                "suggestTags": [
+                  "Spot Check",
+                  "La Jolla Shores",
+                  "San Diego",
+                  "Spot Check"
+                ],
+                "permalink": "https://www.surfline.com/surf-news/spot-check-la-jolla-shores/29493",
+                "content": {
+                  "displayTitle": "",
+                  "subtitle": "Surfing guide to San Diego beachbreak with local Jake Halstead",
+                  "title": "Spot Check: La Jolla Shores"
+                },
+                "tags": [
+                  {
+                    "name": "Spot Check",
+                    "url": "https://www.surfline.com/category/travel/spot-check"
+                  }
+                ]
+              },
+              "contexts": {
+                "type": [
+                  "editorial"
+                ]
+              }
+            },
+            {
+              "text": "La Jolla Shores",
+              "_index": "feed",
+              "_type": "editorial",
+              "_id": "30406",
+              "_score": 8,
+              "_source": {
+                "createdAt": "2018-07-24T22:07:27",
+                "suggestTags": [
+                  "Training",
+                  "Guides",
+                  "Cowell's",
+                  "La Jolla Shores",
+                  "Morro Bay",
+                  "San Onofre",
+                  "Waikiki"
+                ],
+                "permalink": "https://www.surfline.com/surf-news/10-best-beginner-surf-spots/30406",
+                "content": {
+                  "displayTitle": "",
+                  "subtitle": "Looking to learn how to surf? Try paddling out at these entry-level waves.",
+                  "title": "The 10 Best Beginner Surf Spots"
+                },
+                "tags": [
+                  {
+                    "name": "Training",
+                    "url": "https://www.surfline.com/category/training"
+                  },
+                  {
+                    "name": "Guides",
+                    "url": "https://www.surfline.com/surf-news/series/guides"
+                  }
+                ]
+              },
+              "contexts": {
+                "type": [
+                  "editorial"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "status": 200
+  },
+  {
+    "took": 2,
+    "timed_out": false,
+    "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+    },
+    "hits": {
+      "total": 1,
+      "max_score": 34.571198,
+      "hits": [
+        {
+          "_index": "taxonomy",
+          "_type": "travel",
+          "_id": "58f7ed68dadb30820bb3a18e",
+          "_score": 34.571198,
+          "_source": {
+            "breadCrumbs": [
+              "United States",
+              "California",
+              "San Diego"
+            ],
+            "name": "La Jolla",
+            "location": {
+              "lon": -117.2742,
+              "lat": 32.84727
+            },
+            "href": "https://www.surfline.com/travel/united-states/california/san-diego/la-jolla-surfing-and-beaches/5363943"
+          }
+        }
+      ]
+    },
+    "suggest": {
+      "travel-suggest": [
+        {
+          "text": "la jolla",
+          "offset": 0,
+          "length": 8,
+          "options": [
+            {
+              "text": "La Jolla",
+              "_index": "taxonomy",
+              "_type": "travel",
+              "_id": "58f7ed68dadb30820bb3a18e",
+              "_score": 8,
+              "_source": {
+                "breadCrumbs": [
+                  "United States",
+                  "California",
+                  "San Diego"
+                ],
+                "name": "La Jolla",
+                "location": {
+                  "lon": -117.2742,
+                  "lat": 32.84727
+                },
+                "href": "https://www.surfline.com/travel/united-states/california/san-diego/la-jolla-surfing-and-beaches/5363943"
+              },
+              "contexts": {
+                "type": [
+                  "travel"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "status": 200
+  }
+]

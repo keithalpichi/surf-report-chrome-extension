@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import './styles.css'
 import * as dayjs from 'dayjs'
-import { classNames } from './utils'
+import { classNames, useSpotFinder } from './utils'
 import { Location, AppError } from './models'
 
 const mountNode = document.getElementById('app')
@@ -82,12 +82,14 @@ function Modal (props: React.PropsWithChildren<ModalProps>) {
 }
 
 function App () {
-  const [_, updateSearchTerm] = React.useState<string>('')
+  const [searchTerm, updateSearchTerm] = React.useState<string>('')
   const [modalVisible, updateModalVisibility] = React.useState<boolean>(false)
   const [error, setError] = React.useState<AppError | null>(null)
   const [location, setLocation] = React.useState<Location | null>(null)
+  const [spots, updateSpots] = React.useState<Location[]>([])
+  const { data, isLoading, isError } = useSpotFinder(searchTerm)
   navigator.geolocation.getCurrentPosition(
-    (pos: Position) => setLocation(new Location({ coordinates: pos.coords })),
+    (pos: Position) => setLocation(new Location({ coordinates: pos.coords, name: 'unknown' })),
     (posError: PositionError) => {
       switch (posError.code) {
         case 1:
@@ -121,6 +123,11 @@ function App () {
               onChange={handleSearchUpdate}
             />
           </form>
+          {spots.map(spot => (
+            <Card key={spot.id} className='col-span-12'>
+              {spot.name}
+            </Card>
+          ))}
           <button onClick={() => updateModalVisibility(false)}>X</button>
         </div>
       </Modal>
